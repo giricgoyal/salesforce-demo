@@ -17,6 +17,26 @@ button {
     -moz-box-shadow: none !important;
 }
 
+input {
+    border-bottom: none !important;
+    box-shadow: none !important;
+    margin: 0px !important;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.input-full-width {
+    width: 100%;
+}
+
+.input-half-width {
+    width: 49%;
+}
+
 input,
 button,
 .btn {
@@ -38,7 +58,7 @@ a {
 
 body {
     overflow: hidden;
-    background-color: #e0e0e0;
+    background-color: #f9f9f9;
 }
 
 main {
@@ -71,10 +91,35 @@ header {
 .v-separator {
     height: 10px;
     width: 10px;
-    border-radius: 50%;
-    background-color: #f0f0f0;
+    border-radius: 5px;
+    background-color: #c0c0c0;
     display: inline-block;
     margin: 0px 5px;
+}
+
+.h-separator {
+    margin: 10px 0 15px 0;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #c0c0c0;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+    text-decoration: none;
+    outline: 0;
+}
+
+.flex {
+    display: flex
+}
+
+.vertical-align-middle {
+    vertical-align: middle;
+}
+
+.align-items-center {
+    align-items: center;
 }
 
 .flex-1 {
@@ -104,4 +149,12 @@ header {
 
 .text-center {
     text-align: center;
+}
+
+.page-title {
+    color: #a0a0a0;
+} 
+
+.mat-card-header-text {
+    margin: 0px !important;
 }

@@ -1,3 +1,30 @@
-<div>
+<div class="container">
     <fab-button [type]="'add'" (clickfn)="goToAddEvent($event)"></fab-button>
+    <div class="row">
+        <div class="col s12 m6 l4 cursor-pointer" *ngFor="let event of eventsList" [routerLink]="['/event', event.id__c]">
+                <md-card class="event">
+                    <md-card-header>
+                        <md-card-title>{{event.Title__c}}</md-card-title>
+                        <md-card-subtitle>{{event.Start__c | date: "MMM dd, yyyy, hh:mm a"}} - {{event.End__c | date: "MMM dd, yyyy, hh:mm a"}}</md-card-subtitle>
+                    </md-card-header>
+                    <div class="h-separator"></div>
+                    <md-card-content>
+                        <div>
+                            <label>Registration Limit</label>
+                            <span class="pull-right">{{event.Registration_Limit__c}}</span>
+                        </div>
+                        <div>
+                            <label>Remaining Seats</label>    
+                            <span class="pull-right">{{event.Remaining_Seats__c}}</span>
+                        </div>
+                        <div>
+                            <br>
+                            <md-chip-list>
+                                <md-chip color="accent">{{event.Status__c}}</md-chip>
+                            </md-chip-list>
+                        </div>
+                    </md-card-content>
+                </md-card>
+        </div>
+    </div>
 </div>

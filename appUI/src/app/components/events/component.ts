@@ -8,11 +8,41 @@ import { Router } from '@angular/router';
 })
 
 export class EventsListComponent {
+    public eventsList: any;
+
     constructor(private router: Router) {
-        // this.router = router;
+        this.eventsList = [{
+            Title__c: 'Event 1',
+            id__c: 'event1',
+            Description__c: 'Event Description',
+            Start__c: new Date(),
+            End__c: new Date(),
+            Registration_Limit__c: 50,
+            Remaining_Seats__c: 10,
+            Status__c: 'Open'
+        },
+        {
+            Title__c: 'Event 2',
+            id__c: 'event2',
+            Description__c: 'Event Description',
+            Start__c: new Date(),
+            End__c: new Date(),
+            Registration_Limit__c: 50,
+            Remaining_Seats__c: 10,
+            Status__c: 'Closed'
+        },{
+            Title__c: 'Event 3',
+            id__c: 'event3',
+            Description__c: 'Event Description',
+            Start__c: new Date(),
+            End__c: new Date(),
+            Registration_Limit__c: 50,
+            Remaining_Seats__c: 50,
+            Status__c: 'Sold Out'
+        }];
     }
 
     goToAddEvent() {
-        this.router.navigate(['/app/add-event']);
+        this.router.navigate(['/add-event']);
     }
 }

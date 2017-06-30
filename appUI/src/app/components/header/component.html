@@ -2,26 +2,18 @@
     <nav>
         <span class="apptitle">SalesForce Demo</span>
         <div class="pull-right">
-            <button md-icon-button [mdMenuTriggerFor]="menu">
-                <md-icon>more_vert</md-icon>
+            <button class="menu-trigger" md-icon-button [mdMenuTriggerFor]="menu">
+                <md-icon>account_circle</md-icon>
             </button>
-            <md-menu #menu="mdMenu">
-                <button md-menu-item [routerLink]="['/app/events']">
-                <!--<md-icon>login</md-icon>-->
-                <span>Events</span>
-            </button>
-            <button md-menu-item [routerLink]="['/app/about']">
-                <!--<md-icon>login</md-icon>-->
-                <span>About</span>
-            </button>
-            <button md-menu-item [routerLink]="['/login']">
-                <!--<md-icon>login</md-icon>-->
-                <span>Login</span>
-            </button>
-            <button md-menu-item (click)="logout()">
-                <!--<md-icon>notifications_off</md-icon>-->
-                <span>Logout</span>
-            </button>
+            <md-menu #menu="mdMenu" [overlapTrigger]="false">
+                <button md-menu-item [routerLink]="['/login']">
+                    <!--<md-icon>login</md-icon>-->
+                    <span>Login</span>
+                </button>
+                <button md-menu-item (click)="logout()">
+                    <!--<md-icon>notifications_off</md-icon>-->
+                    <span>Logout</span>
+                </button>
             </md-menu>
         </div>
         <div></div>

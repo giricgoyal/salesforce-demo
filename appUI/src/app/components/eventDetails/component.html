@@ -1,0 +1,19 @@
+<fab-button [type]="'add'" (clickfn)="goToAddSession($event)"></fab-button>
+<div class="container">
+    <md-card>
+        <md-card-header>
+            <md-card-title>
+                {{eventDetails.Title__c}}
+            </md-card-title>
+            <md-card-subtitle>{{eventDetails.Start__c | date: "medium"}} - {{eventDetails.End__c | date: "medium"}}</md-card-subtitle>
+        </md-card-header>
+        <div class="h-separator"></div>
+        <md-card-content>
+            <p>{{eventDetails.Description__c}}</p>
+        </md-card-content>
+    </md-card>
+    <div class="separator"></div>
+    <md-card>
+
+    </md-card>
+</div>

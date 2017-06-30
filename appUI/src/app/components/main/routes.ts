@@ -14,12 +14,20 @@ const routes: Routes = [
                 // canActivate: [AuthGuard]
             },
             {
-                path: 'events',
+                path: '',
                 loadChildren: '../events/index#EventsListModule'
             },
             {
                 path: 'add-event',
                 loadChildren: '../addEvent/index#AddEventModule'
+            },
+            {
+                path: 'add-session',
+                loadChildren: '../addSession/index#AddSessionModule'
+            },
+            {
+                path: 'event/:id',
+                loadChildren: '../eventDetails/index#EventDetailModule'
             }
         ]
     }

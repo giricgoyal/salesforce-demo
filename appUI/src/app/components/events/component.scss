@@ -1,0 +1,12 @@
+.row {
+    padding-top: 10px;
+    .col {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        .event {
+            &:hover {
+                box-shadow: 0px 0px 15px #909090;
+            }
+        }
+    }
+}

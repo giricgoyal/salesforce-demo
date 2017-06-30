@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ToasterModule } from 'angular2-toaster';
 import { RouterModule } from '@angular/router';
-import { MdButtonModule, MdCheckboxModule, MdSidenavModule, MdMenuModule, MdIconModule, MdCardModule } from '@angular/material';
+import { MdButtonModule, MdCheckboxModule, MdSidenavModule, MdMenuModule, MdIconModule, MdCardModule, MdInputModule, MdDatepickerModule, MdNativeDateModule, MdChipsModule } from '@angular/material';
 
 import { HttpService, ToasterInjectableService, SessionService, AuthenticationService, AuthGuard } from './services';
 import { AppLoaderComponent, NameInitialsComponent, FabButtonComponent } from './components';
@@ -21,7 +21,11 @@ import { AppLoaderComponent, NameInitialsComponent, FabButtonComponent } from '.
     MdSidenavModule,
     MdMenuModule,
     MdIconModule,
-    MdCardModule
+    MdCardModule,
+    MdInputModule,
+    MdDatepickerModule,
+    MdNativeDateModule,
+    MdChipsModule
   ],
   declarations: [
     AppLoaderComponent,
@@ -42,7 +46,11 @@ import { AppLoaderComponent, NameInitialsComponent, FabButtonComponent } from '.
     MdSidenavModule,
     MdMenuModule,
     MdIconModule,
-    MdCardModule
+    MdCardModule,
+    MdInputModule,
+    MdDatepickerModule,
+    MdNativeDateModule,
+    MdChipsModule
   ]
 })
 

@@ -42,10 +42,6 @@ app.use(session({
   resave: true
 }));
 
-// Use the passport package in our application
-require('./src/auth/auth');
-app.use(passport.initialize());
-
 
 // app.use(express.favicon(__dirname + '/public/favicon.ico'));
 // app.use(express.static(__dirname + '/public'));

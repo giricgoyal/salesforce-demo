@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { HttpService, AuthenticationService } from '../../shared';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
     selector: 'login-component',
@@ -15,31 +16,28 @@ export class LoginComponent implements OnInit {
 
     private httpService: HttpService;
     private authService: AuthenticationService;
+    private activatedRoute: ActivatedRoute;
     private showLoader: boolean;
 
-    ngOnInit() {
-        
-    }
-
-    constructor(httpService: HttpService, authService: AuthenticationService) {
+    constructor(httpService: HttpService, authService: AuthenticationService, activatedRoute: ActivatedRoute) {
         this.httpService = httpService;
         this.authService = authService;
+        this.activatedRoute = activatedRoute;
         this.showLoader = false;
     }
 
-    login() {
-        this.showLoader = true;
-        this.httpService.request('/users/login', 'POST', 'json', this.data, null, (response) => {
-            console.log(response);
-            this.authService.getToken(response, this.data, () => {
-                this.showLoader = false;
-            }, null);
-        }, () => {
-            this.showLoader = false;
-        });
+    ngOnInit() {
+        let code = this.activatedRoute.snapshot.queryParams['code'];
+        console.log(code);
+        this.getTokens(code);
     }
 
-    isLoginDisabled() {
-        return !this.data.phonenumber || !this.data.password;
+    getTokens(code) {
+        this.httpService.request(`salesforce/token?code=${code}`, 'GET', 'json', null, null, (response) => {
+            console.log(response);
+            
+        }, () => {
+
+        });
     }
 }

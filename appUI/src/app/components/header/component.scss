@@ -1,11 +1,14 @@
 header {
-    .apptitle {
+    nav {
         padding-left: 20px;
-        font-size: 20px;
-    }
-    .menu-trigger {
-        &:focus {
-            background-color: transparent;
+        padding-right: 20px;
+        .apptitle {
+            font-size: 20px;
+        }
+        .menu-trigger {
+            &:focus {
+                background-color: transparent;
+            }
         }
     }
 }

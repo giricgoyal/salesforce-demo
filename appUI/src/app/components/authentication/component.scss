@@ -2,13 +2,11 @@
     max-width: 200px;
 }
 
-.login-container,
-.signup-container {
+.login-container {
     &>div {
         height: 100vh;
     }
-    .login-panel,
-    .signup-panel {
+    .login-panel {
         box-shadow: 0px 0px 2px 2px #999999;
         -moz-box-shadow: 0px 0px 2px 2px #999999;
         -webkit-box-shadow: 0px 0px 2px 2px #999999;

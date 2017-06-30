@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { LoginComponent } from './login.component';
-import { SignupComponent } from './signup.component';
-import { ForgotPasswordComponent } from './forgotpassword.component';
 import { SharedModule, AuthenticationService } from '../../shared';
 import { AuthenticationRouteModule } from './routes';
 
@@ -11,16 +9,12 @@ import { AuthenticationRouteModule } from './routes';
     SharedModule
   ],
   declarations: [
-    LoginComponent,
-    SignupComponent,
-    ForgotPasswordComponent
+    LoginComponent
   ]
 })
 
 export class AuthenticationModule {
-  constructor(private authService: AuthenticationService) {
-    if (this.authService.isAuthenticated()) {
-      this.authService.redirectAfterAuth();
-    }
+  constructor() {
+    
   }
 }

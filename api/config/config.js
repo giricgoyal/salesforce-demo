@@ -35,63 +35,14 @@ var serverConfig = {
     }
 }
 
-var security = {
-    tokenLife: 10 * 24 * 60 * 60
+var salesforce = {
+    endpoint: 'https://ap5.salesforce.com',
+    client_id: '3MVG9d8..z.hDcPI.N6z1Pfs.Thw0F8OwjIPYGQcoP8wKWEhC1rf5eH8tv6K_7LXNPANwYlytbjdnR0k2.FCU',
+    client_secret: '8574525558393730183'
 };
 
-var instamojo = {
-    localhost: {
-        client_id: '',
-        client_secret: '',
-        referrer: '',
-        salt: '',
-        xapi_key: '',
-        xauth_token: ''
-    },
-    staging: {
-        client_id: '',
-        client_secret: '',
-        referrer: '',
-        salt: '',
-        xapi_key: '',
-        xauth_token: ''
-    },
-    live: {
-        client_id: '',
-        client_secret: '',
-        referrer: '',
-        salt: '',
-        xapi_key: '',
-        xauth_token: ''
-    }
-}
-
-
-var mailerConfig = {
-    localhost: {
-        host: '',
-        port: 26,
-        username: '',
-        password: '',
-    },
-    staging: {
-        host: '',
-        port: 26,
-        username: '',
-        password: '',
-    },
-    live: {
-        host: '',
-        port: 26,
-        username: '',
-        password: '',
-    }
-}
-
 config.mongodb = mongodbConfig[env];
-config.security = security;
-config.instamojo = instamojo[env];
 config.server = serverConfig[env];
-config.mailerConfig = mailerConfig[env];
+config.salesforce = salesforce;
 
 module.exports = config;

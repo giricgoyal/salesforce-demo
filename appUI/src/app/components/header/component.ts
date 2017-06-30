@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { APP_CONFIG } from '../../shared';
-import { SessionService, AuthenticationService } from '../../shared';
+import { HttpService } from '../../shared';
 
 @Component({
     selector: 'app-header',
@@ -15,18 +15,19 @@ export class AppHeaderComponent {
     public isAdmin: boolean;
     public isDoctor: boolean;
 
-    constructor(private sessionService: SessionService, private authService: AuthenticationService) {
+    constructor(private httpService: HttpService) {
         this.title = APP_CONFIG.appTitle;
-        this.fullName = this.sessionService.getSessionObj('fullname');
-        this.isAdmin = this.sessionService.getSessionObj('is_admin') === 'true';
-        this.isDoctor = this.sessionService.getSessionObj('access_type') === 'doctor';
     }
 
-    toggleSidebar() {
-
+    login() {
+        this.httpService.request('salesforce/login-link', 'GET', 'json', null, null, (resp) => {
+            window.location.href = resp.url;
+        }, (err) => {
+            console.log(err);
+        });
     }
 
     logout() {
-        this.authService.logout();
+        
     }
 }

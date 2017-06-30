@@ -12,8 +12,6 @@ export class AppComponent {
   public toasterConfig;
 
   constructor(private httpService: HttpService, toasterService: ToasterInjectableService, private sessionService: SessionService) {
-    let header = this.sessionService.getSessionObj('access_token') ? 'Bearer ' + this.sessionService.getSessionObj('access_token') : '';
-    this.httpService.setHttpDefaultsHeadersCommonAuthorization(header);
-    this.toasterConfig = toasterService.getConfig();
+    
   }
 }

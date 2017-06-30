@@ -9,6 +9,10 @@ const routes: Routes = [
     {
         path: '',
         loadChildren: 'app/components/main/index#MainModule'
+    },
+    {
+        path: 'auth',
+        loadChildren: 'app/components/authentication/index#AuthenticationModule'
     }
 ];
 

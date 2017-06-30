@@ -6,7 +6,7 @@
                 <md-icon>account_circle</md-icon>
             </button>
             <md-menu #menu="mdMenu" [overlapTrigger]="false">
-                <button md-menu-item [routerLink]="['/login']">
+                <button md-menu-item (click)="login()">
                     <!--<md-icon>login</md-icon>-->
                     <span>Login</span>
                 </button>

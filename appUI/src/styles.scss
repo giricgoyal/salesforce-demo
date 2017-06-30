@@ -1,0 +1,107 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../bower_components/materialize/sass/materialize.scss";
+@import "../node_modules/angular2-toaster/toaster.css";
+@import "assets/font-awesome-4.7.0/css/font-awesome.min.css";
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+
+button {
+    cursor: pointer;
+    pointer-events: auto;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+
+input,
+button,
+.btn {
+    border-radius: 2px !important;
+}
+
+a {
+    text-decoration: none !important;
+    font-weight: 500;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.add-fab-icon {
+    position: fixed !important;
+    bottom: 10px;
+    right: 10px;
+}
+
+body {
+    overflow: hidden;
+    background-color: #e0e0e0;
+}
+
+main {
+    overflow-y: auto;
+    width: 100%;
+}
+
+footer {
+    border-top: 1px solid #f0f0f0;
+}
+
+header {
+    nav {
+        height: 60px;
+    }
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.main-full-height {
+    height: calc(100vh - 60px)
+}
+
+.v-separator {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.fix-sidebar {
+    padding-left: 200px;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    left: 0;
+}
+
+.minimized-sidebar {
+    padding-left: 75px !important;
+}
+
+@media only screen and (max-width: 992px) {
+    .fix-sidebar {
+        padding-left: 0px;
+    }
+    .minimized-sidebar {
+        padding-left: 75px !important;
+    }
+}
+
+.text-center {
+    text-align: center;
+}

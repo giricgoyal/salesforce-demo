@@ -1,0 +1,21 @@
+{
+  "name": "app-ui",
+  "description": "",
+  "main": "",
+  "authors": [
+    "giricgoyal <giricgoyal@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6",
+    "materialize": "^0.99.0"
+  }
+}

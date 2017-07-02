@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "../bower_components/materialize/sass/materialize.scss";
-@import "../node_modules/angular2-toaster/toaster.css";
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+// @import "../node_modules/angular2-toaster/toaster.css";
 @import "assets/font-awesome-4.7.0/css/font-awesome.min.css";
 html {
     font-family: "Roboto", sans-serif;

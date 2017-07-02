@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { HttpService, ToasterInjectableService } from './shared/services';
+import { HttpService } from './shared/services';
 import { SessionService } from './shared';
 
 @Component({
@@ -11,7 +11,7 @@ import { SessionService } from './shared';
 export class AppComponent {
   public toasterConfig;
 
-  constructor(private httpService: HttpService, toasterService: ToasterInjectableService, private sessionService: SessionService) {
+  constructor(private httpService: HttpService, private sessionService: SessionService) {
     
   }
 }

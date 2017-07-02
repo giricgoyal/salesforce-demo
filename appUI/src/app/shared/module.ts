@@ -2,11 +2,10 @@ import { CommonModule } from '@angular/common';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { ToasterModule } from 'angular2-toaster';
 import { RouterModule } from '@angular/router';
 import { MdButtonModule, MdCheckboxModule, MdSidenavModule, MdMenuModule, MdIconModule, MdCardModule, MdInputModule, MdDatepickerModule, MdNativeDateModule, MdChipsModule } from '@angular/material';
 
-import { HttpService, ToasterInjectableService, SessionService, AuthenticationService, AuthGuard } from './services';
+import { HttpService, SessionService, AuthenticationService, AuthGuard } from './services';
 import { AppLoaderComponent, NameInitialsComponent, FabButtonComponent } from './components';
 
 @NgModule({
@@ -14,7 +13,6 @@ import { AppLoaderComponent, NameInitialsComponent, FabButtonComponent } from '.
     CommonModule,
     FormsModule,
     HttpModule,
-    ToasterModule,
     RouterModule,
     MdButtonModule,
     MdCheckboxModule,
@@ -36,7 +34,6 @@ import { AppLoaderComponent, NameInitialsComponent, FabButtonComponent } from '.
     CommonModule,
     FormsModule,
     HttpModule,
-    ToasterModule,
     RouterModule,
     AppLoaderComponent,
     NameInitialsComponent,
@@ -58,7 +55,7 @@ export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
-      providers: [ HttpService, ToasterInjectableService, SessionService, AuthenticationService, AuthGuard ]
+      providers: [ HttpService, SessionService, AuthenticationService, AuthGuard ]
     }
   }
 }

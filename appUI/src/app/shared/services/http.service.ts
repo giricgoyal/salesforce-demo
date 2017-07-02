@@ -5,17 +5,14 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
-import { ToasterInjectableService } from './toaster.service';
 
 @Injectable()
 export class HttpService {
     private headers;
     private http: Http;
-    private toasterService: ToasterInjectableService;
 
-    constructor (http: Http, toasterService: ToasterInjectableService) {
+    constructor (http: Http) {
         this.http = http;
-        this.toasterService = toasterService;
         this.headers = new Headers();
     }
 
@@ -56,7 +53,7 @@ export class HttpService {
         .subscribe(
             res => successFn(res),
             err => {
-                this.toasterService.error('Error', err);
+                // this.toasterService.error('Error', err);
                 if (errorFn) {
                     errorFn(err);
                 }

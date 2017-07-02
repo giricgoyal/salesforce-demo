@@ -22,4 +22,11 @@ router.get('/token?:code',
     controller.getTokens
 );
 
+router.get('/events',
+    function(req, res, next) {
+        next();
+    },
+    controller.getEvents
+);
+
 module.exports = router;

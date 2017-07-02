@@ -1,4 +1,5 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { HttpService, AuthenticationService } from '../../shared';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,10 +8,10 @@ import { Router } from '@angular/router';
     styleUrls: ['./component.scss']
 })
 
-export class EventsListComponent {
+export class EventsListComponent implements OnInit {
     public eventsList: any;
 
-    constructor(private router: Router) {
+    constructor(private router: Router, private httpService: HttpService) {
         this.eventsList = [{
             Title__c: 'Event 1',
             id__c: 'event1',
@@ -42,7 +43,19 @@ export class EventsListComponent {
         }];
     }
 
+    ngOnInit() {
+        this.getEvents();
+    }
+
     goToAddEvent() {
         this.router.navigate(['/add-event']);
+    }
+
+    getEvents() {
+        this.httpService.request('salesforce/events', 'GET', 'json', null, null, (resp) => {
+            console.log(resp);
+        }, (err) => {
+            console.log(err);
+        });
     }
 }
